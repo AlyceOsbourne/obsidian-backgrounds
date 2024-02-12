@@ -1,0 +1,10 @@
+{
+	"id": "pyxie-backgrounds",
+	"name": "Backgrounds",
+	"version": "1.0.0",
+	"minAppVersion": "0.15.0",
+	"description": "Spice up your canvas with some new backgrounds!",
+	"author": "AlyceOsbourne",
+	"authorUrl": "https://github.com/AlyceOsbourne/",
+	"isDesktopOnly": false
+}
