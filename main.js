@@ -154,10 +154,17 @@ class Background extends obsidian.Plugin {
             }
         }));
         
-    if (this.settings.background) {
-        const { base64String, extension } = this.settings.background;
-        setBackground(base64String, extension, this.app);
-    }
+        this.registerEvent(this.app.workspace.on('layout-ready', async () => {
+            if (this.settings.background) {
+                const { base64String, extension } = this.settings.background;
+                setBackground(base64String, extension, this.app);
+            }
+        }));
+        
+        if (this.settings.background) {
+            const { base64String, extension } = this.settings.background;
+            setBackground(base64String, extension, this.app);
+        }
         
         this.registerEvent(this.app.workspace.on('settings', (settings) => {
             if (settings.plugin.id === this.manifest.id) {
